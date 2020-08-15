@@ -10,7 +10,15 @@ let counter = 0;
 
 nextBtn.addEventListener('click', () => {
   counter++;
+  carousel();
 });
 prevBtn.addEventListener('click', () => {
   counter--;
+  carousel();
 });
+
+const carousel = () => {
+  slides.forEach((slide) => {
+    slide.style.transform = `translateX(-${counter * 100}%)`;
+  });
+};
