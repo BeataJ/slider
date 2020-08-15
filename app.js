@@ -5,3 +5,12 @@ const prevBtn = document.querySelector('.prevBtn');
 slides.forEach((slide, index) => {
   slide.style.left = `${index * 100}%`;
 });
+
+let counter = 0;
+
+nextBtn.addEventListener('click', () => {
+  counter++;
+});
+prevBtn.addEventListener('click', () => {
+  counter--;
+});
